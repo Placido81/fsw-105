@@ -1,41 +1,62 @@
-// ADD + :
-let input1 = document.getElementById("test")
+var readlineSync = require( 'readline-sync' )
 
-let input2 = document.getElementById('test1')
+// Wait for user's response.
+var operatorName = readlineSync.question( "May I have your Name?" );
+console.log( "Hi " + operatorName + "!" );
+// Enter Numbers:
+var num1 = readlineSync.questionInt("Please Enter First Number");
+// Enter Numbers:
+var num2 = readlineSync.questionInt("Please Enter Second Number");
 
-let button = document.getElementById("submit1")
-button.addEventListener("click", function(){
-    let add = Number(input1.value) + Number(input2.value)
-let output = document.createElement("h1")
-output.textContent = add
-let plus1= document.getElementById("plus1")
-plus1.append(output)
-})
+function myFunction(){
 
-//Minus - :
-let input3 = document.getElementById("test2")
+    // Enter Arithmetic:
+ var operatorName = readlineSync.question("Please enter the operation to perform: add, sub, mul, div, mod, exp, ?" )
+    // ADD Numbers + :
+    if(operatorName == "add"){
+        add(num1, num2);
+    // Subtract Numbers - :
+    }else if(operatorName == "sub"){
+        sub( num1, num2);
+    }
+    // Multiply Numbers * :
+    if( operatorName == "mul"){
+        mul(num1, num2);
+    // Divide Numbers / :
+    }else if(operatorName == "div"){
+        div(num1, num2);
+    // Module Numbers % :
+    }else if(operatorName == "mod"){
+        mod(num1, num2);
+    // Exponentiation Numbers ** :
+    }else if(operatorName == "exp"){
+        exp(num1, num2);  
+    } 
+}
 
-let input4 = document.getElementById("test3")
-let button1  = document.getElementById("submit2")
-button1.addEventListener("click", function(){
-    var sub = Number(input3.value) - Number(input4.value)
-    var output1 = document.createElement("h1")
-    output1.textContent = sub
-    let mark1 = document.getElementById("mark1")
-    mark1.append(output1)
+myFunction()
+    // ADD + :
+function add( num1, num2 ){
+    console.log("The Result Is:", num1 + num2);
+}
+// Subtract - :  
+function sub( num1, num2 ){
+      console.log("The Result Is:", num1 - num2);
+  }  
+  // Multiply * :
+  function mul( num1, num2 ){
+      console.log( "The Result Is:", num1 * num2);
+  }
+  // Divide / :
+  function div( num1,  num2 ){
+      console.log( "The Result Is:", num1 / num2);
+  } 
+  // Module % :
+  function mod( num1, num2){
+      console.log( "The Result Is: ", num1 % num2);
+  }
+  // Exponentiation ** :
+ function exp( num1, num2){
 
-
-})
-
-let input5 = document.getElementById("test4")
-
-let input6 = document.getElementById("test5")
-let button2  = document.getElementById("submit3")
-button2.addEventListener("click", function(){
-    var mul = Number(input5.value) * Number(input6.value)
-    var output2 = document.createElement("h1")
-    output2.textContent = mul
-    let mark2 = document.getElementById("mark2")
-    mark2.append(output2)
-
-})
+   console.log("The Result Is:", num1 ** num2);
+  }
