@@ -1,21 +1,25 @@
 function capitlizedAndLowercased(str1){
 
     var str2 = str1.toUpperCase();
-    str1.toUpperCase();
-    console.log("All Capitol Letters:"    + str2);
+    var str3 = str1.toLowerCase()
+    console.log(str2 + str3)
+    //console.log("All Capitol Letters:"    + str2);
 }
 capitlizedAndLowercased("hello")
 // All Lower Case Letters:
-var str1 = "Hello"
-var str2 = str1.toLowerCase();
-str1.toLowerCase();
 
-console.log("all Lower Case Letters:" + str1.toLowerCase());
+//var str2 = str1.toLowerCase();
+//str1.toLowerCase();
+
+//console.log("all Lower Case Letters:" + str1.toLowerCase());
 
 // Return half Lngth. Numb.Round Down:
-console.log(Math.floor( 2.55 ));
-
-console.log( Math.floor(5.57));
+var half = "places"
+function myFunction(math){
+    console.log(Math.floor( math.length / 2 ));
+}
+myFunction(half)
+//console.log( Math.floor(5.57));
  
 // Return First half Of String:
 
