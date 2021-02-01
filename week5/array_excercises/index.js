@@ -155,6 +155,7 @@ console.log(totalVotes(voters));
 
 // Extra credit:
 function flatten(arr){
+    
 
 }
 var arrays = [
@@ -165,6 +166,7 @@ var arrays = [
 console.log(flatten(arrays));
 
 // Section D:
+
 // Num.#1
 function leastToGreatest(arr){
  return  arr.sort(function(a, b){
@@ -197,6 +199,8 @@ function leastToGreatest(arr){
     console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"]));
 
     // Extra Credit:
+    
+    
     function alphabetical(arr){
         return arr.sort(function(a, b){
            if( a < b){
